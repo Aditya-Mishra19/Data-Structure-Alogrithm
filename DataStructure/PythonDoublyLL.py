@@ -62,6 +62,18 @@ class LinkedList:
 			return
 		print("Element is not found in the list")
 
+	# reverse the doubly linkedlist.
+	def reverse(self):
+	    temp = None
+	    current = self.head
+	    while current is not None:
+	        temp = current.prev
+	        current.prev = current.next
+	        current.next = temp
+	        current = current.prev
+	    if temp is not None:
+	        self.head = temp.prev  
+
 	def display(self):
 		if self.head == None:
 			print("List is empty")
