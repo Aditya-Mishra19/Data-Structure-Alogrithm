@@ -7,7 +7,7 @@ class BFS:
 		self.graph = {0:[1], 1:[0, 2], 2: [1, 3], 
 		3: [2, 4, 5], 4: [3, 5, 7], 5: [3, 4, 6, 7], 6: [5, 7], 7:[4, 5, 6]}
 
-	def bfs(self, source):
+	def bfs(self, source): 
 		queue = []
 		queue.append(source)
 		self.dist[source] = 0
