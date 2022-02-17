@@ -33,18 +33,18 @@ class Graph:
             print(" \n")
             
     def deletenode(self,s,d):
-    	temp1 = None
-        temp = self.graph[s]
-        while temp:
-            if temp.vertex == d:
-                if temp1 == None:
-                    temp1 = temp
-                    self.graph[s] = temp.next
-                    del temp1
-                else:
-                    temp1.next = temp.next
-            temp1 = temp
-            temp = temp.next
+            temp1 = None
+            temp = self.graph[s]
+            while temp:
+                if temp.vertex == d:
+                    if temp1 == None:
+                        temp1 = temp
+                        self.graph[s] = temp.next
+                        del temp1
+                    else:
+                        temp1.next = temp.next
+                temp1 = temp
+                temp = temp.next
 
 
 if __name__ == "__main__":
